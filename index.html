@@ -1,0 +1,1165 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122b43"><meta name="description" content="ベストフィット情報Ⅰ p.70〜75／問101〜106のためのPython実行演習。タブレット対応。"><title>学習コース | 情報Ⅰ Python LAB</title><style>
+:root{--bg:#f1f5f9;--ink:#172b41;--muted:#5c6d80;--navy:#122b43;--navy2:#213f5a;--accent:#0e817b;--pale:#e7f6f2;--white:#fff;--line:#d8e2eb;--gold:#ffcf81;--danger:#ab3248;--ok:#08765e;--focus:#47aece}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic',Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-text-size-adjust:100%}button,input,textarea{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}a{color:inherit}.top{background:var(--navy);color:white}.top-in{max-width:1240px;margin:auto;padding:17px 24px 24px}.brandbar{display:flex;align-items:center;gap:16px;justify-content:space-between;flex-wrap:wrap}.brand{display:inline-flex;align-items:center;gap:10px;font-size:17px;font-weight:900;text-decoration:none}.brand-icon{width:37px;height:37px;border-radius:11px;background:#64e6d2;color:#09443e;display:grid;place-items:center;font-weight:900;font-family:monospace}.brand small{font-size:11px;font-weight:600;color:#bcd2e1}.rightlinks{display:flex;align-items:center;gap:14px;font-size:12px}.rightlinks a{color:#d7eff2;text-decoration:none}.hero{margin-top:21px;display:flex;justify-content:space-between;align-items:end;gap:16px}.eyebrow{color:#72e3d4;font-size:11px;font-weight:900;letter-spacing:.11em;margin:0 0 6px}.hero h1{font-size:clamp(22px,3.3vw,34px);letter-spacing:-.03em;line-height:1.4;margin:0}.hero p{margin:7px 0 0;color:#c8d6e2;font-size:13px}.progress-wrap{min-width:150px;text-align:right}.progress-wrap strong{font-size:23px}.progress-wrap small{font-size:11px;color:#c8d6e2;display:block}.progress-track{margin-top:6px;background:#47617a;height:7px;border-radius:10px;overflow:hidden}.progress-bar{background:#61e0c8;height:100%;width:0;transition:width .3s}main{max-width:1240px;margin:auto;padding:22px 24px 44px}.eyeline{font-size:12px;font-weight:900;letter-spacing:.05em;color:var(--muted);margin:0 0 11px}.categories{display:grid;grid-template-columns:repeat(7,minmax(120px,1fr));gap:9px;margin:0 0 20px}.category{background:white;min-height:92px;border:1px solid var(--line);border-radius:12px;text-decoration:none;padding:12px 10px;display:flex;flex-direction:column;justify-content:center;gap:4px}.category:hover{border-color:#75c4b8}.category[aria-current=page]{background:var(--pale);border:2px solid var(--accent);padding:11px 9px}.cat-num{font:800 11px ui-monospace,Consolas,monospace;color:#087970}.category strong{font-size:13px;line-height:1.3}.category small{font-size:10px;color:var(--muted)}.lesson-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:17px}.lesson-chip{padding:9px 13px;border:1px solid var(--line);background:white;border-radius:999px;font-size:12px;color:#394c60;font-weight:800;min-height:42px}.lesson-chip.current{background:var(--navy);border-color:var(--navy);color:white}.lesson-chip .tick{color:#0c9476;margin-left:5px}.lesson-chip.current .tick{color:#80ebdc}.workspace{display:grid;grid-template-columns:minmax(310px,.88fr) minmax(0,1.25fr);gap:17px;align-items:start}.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 24px rgba(15,45,72,.04)}.mission{padding:23px}.tags{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:13px}.tag{font-size:11px;font-weight:900;background:#e9eff6;color:#315674;padding:4px 9px;border-radius:6px}.tag.gold{background:#fff0ce;color:#79510d}.tag.green{background:#e0f5ec;color:#116454}.mission h2{font-size:clamp(20px,2.3vw,27px);line-height:1.35;letter-spacing:-.025em;margin:0 0 8px}.small-muted{font-size:12px;color:var(--muted)}.goal{margin:0 0 17px;font-size:13px;color:#5a6c7f}.task{background:#eaf8f3;border:1px solid #bfe6d9;border-radius:12px;padding:17px;margin:17px 0}.task .label{font-size:12px;color:#107363;font-weight:900;margin:0 0 5px}.task p{font-size:15px;font-weight:800;line-height:1.8;margin:0;white-space:pre-wrap}.expected{border:1px solid var(--line);border-radius:10px;padding:13px;margin:16px 0}.expected strong{font-size:12px;color:#5a6b7c;display:block;margin-bottom:7px}.expected pre{font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}.tip{background:#f6f8fb;border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin:12px 0}.tip summary{font-size:13px;font-weight:900;color:#335775;cursor:pointer}.tip p{font-size:13px;margin:10px 0 2px;color:#4d5f70}.trace{border-left:3px solid #70b8ae;padding:0 0 0 13px;margin:12px 0}.trace li{font-size:12px;color:#4d5d6b;margin:6px 0}.quiz{border-top:1px solid var(--line);padding-top:18px;margin-top:20px}.quiz h3{font-size:15px;margin:0 0 9px}.qgroup{border:1px solid #e0e7ed;border-radius:11px;padding:12px 13px;margin:10px 0}.qtitle{font-size:13px;font-weight:900;margin:0 0 9px}.option{display:flex;align-items:center;gap:9px;border:1px solid transparent;border-radius:7px;cursor:pointer;padding:7px 8px;font-size:13px;line-height:1.55}.option:has(input:checked){border-color:#93cfc4;background:#eaf8f3}.option input{accent-color:var(--accent);width:18px;height:18px;flex-shrink:0}.answer-input{width:100%;font-family:ui-monospace,Consolas,monospace;font-size:16px;border:1px solid #bdcfdb;border-radius:8px;padding:10px}.btn{border:0;border-radius:9px;padding:11px 15px;font-size:13px;font-weight:900;min-height:44px}.btn.primary{background:var(--accent);color:white}.btn.primary:hover{background:#096962}.btn.secondary{border:1px solid #cbd7e2;background:#fff;color:#335169}.btn.danger{background:#ffe9ed;color:#a13248}.btn:disabled{opacity:.5;cursor:default}.action-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.notice{font-size:12px;color:#516679;margin:9px 0}.feedback{margin:12px 0 0;padding:12px 13px;border-radius:10px;border:1px solid var(--line);font-size:13px;line-height:1.8;background:#f5f8fc}.feedback.ok{background:#e5f6ec;border-color:#b6e4c7;color:#075f41}.feedback.warn{background:#fff5db;border-color:#f4d899;color:#76510a}.feedback.error{background:#fff0ef;border-color:#f4c1c1;color:#953842}.lesson-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:19px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}.editor{overflow:hidden}.editor-title{display:flex;align-items:center;justify-content:space-between;padding:18px 19px 10px;gap:10px}.editor-title strong{font-size:15px}.editor-title .language{background:#e5f2fc;color:#285d83;padding:5px 9px;border-radius:6px;font-size:11px;font-weight:800}.editor-help{font-size:11px;color:#6b7b8a;padding:0 19px 12px}.codearea{background:#172c43;padding:12px 0}.codearea textarea{display:block;background:#172c43;color:#f1f6ff;border:0;resize:vertical;min-height:254px;width:100%;font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,'Liberation Mono',monospace;outline:none;white-space:pre;overflow:auto;tab-size:4;padding:9px 17px;caret-color:#8be8cc}.codearea textarea:focus{outline:none}.codearea textarea::selection{background:#496b8c}.keys{display:flex;flex-wrap:wrap;gap:7px;padding:12px 15px;background:#eaf0f5}.key{padding:6px 11px;min-height:35px;background:white;border:1px solid #c7d5e1;border-radius:8px;font:700 12px ui-monospace,Consolas,monospace}.editor-controls{padding:14px 17px;border-bottom:1px solid var(--line)}.stdin{display:flex;align-items:center;gap:10px;margin:13px 17px 0}.stdin label{font-size:12px;font-weight:800;color:#566c80;flex-shrink:0}.stdin input{flex:1;min-width:0;padding:9px 10px;border-radius:8px;border:1px solid #bdceda;font:14px ui-monospace,Consolas,monospace}.console{padding:17px}.console-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;font-size:13px;font-weight:900}.runtime{font-size:11px;color:#607184}.terminal{background:#0e2031;border-radius:10px;color:#ebf2fa;padding:16px;margin:0;min-height:155px;max-height:355px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:14px/1.7 ui-monospace,Consolas,monospace}.terminal.is-error{color:#ffc2c2}.result{font-size:13px;margin-top:11px;padding:9px 10px;border-radius:9px;display:none}.result.visible{display:block}.result.ok{background:#e2f5e8;color:#116442}.result.no{background:#fff3d7;color:#74501a}.solution{padding:13px 17px 19px;border-top:1px solid var(--line)}.solution summary{cursor:pointer;font-size:13px;font-weight:900;color:#3d6276}.solution p{font-size:13px;line-height:1.8;color:#586b7b}.foot{max-width:1240px;margin:auto;padding:0 24px 35px;color:#65778b;font-size:11px}.homehero{background:white;border:1px solid var(--line);border-radius:16px;padding:25px;margin-bottom:22px}.homehero h2{margin:0 0 8px;font-size:23px}.homehero p{margin:0;color:var(--muted);font-size:14px}.roadmap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.road{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;text-decoration:none;display:block}.road:hover{border-color:#0c8d7e;box-shadow:0 4px 14px #1f4d4d14}.roadtop{display:flex;align-items:center;justify-content:space-between;gap:12px}.road .num{color:var(--accent);font-weight:900;font-size:13px}.road h3{font-size:18px;margin:6px 0 3px}.road p{font-size:12px;color:var(--muted);margin:0 0 13px}.roadbottom{font-size:12px;font-weight:900;color:#275b64}.home-summary{margin-top:20px;background:#e5f5f0;border:1px solid #bee5da;border-radius:13px;padding:17px;font-size:13px}.home-summary strong{display:block;margin-bottom:5px}.home-summary p{margin:0}.visuallyhidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.allgood{font-size:12px;color:#075f48;font-weight:900}@media(max-width:1070px){.categories{grid-template-columns:repeat(4,minmax(0,1fr))}.workspace{grid-template-columns:minmax(0,1fr) minmax(0,1.17fr)}}@media(max-width:760px){.top-in{padding:13px 15px 20px}main{padding:16px 13px 30px}.hero{align-items:start}.hero p{font-size:12px}.progress-wrap{min-width:90px}.progress-wrap strong{font-size:18px}.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.category{min-height:62px;padding:9px 12px}.category[aria-current=page]{padding:8px 11px}.category small{display:none}.workspace{grid-template-columns:1fr}.mission{padding:17px}.task{padding:14px}.editor-title{padding:15px 14px 9px}.editor-help{padding:0 14px 10px}.codearea textarea{min-height:242px;font-size:13px}.roadmap{grid-template-columns:1fr}.homehero{padding:20px}.rightlinks{gap:6px}.rightlinks .extra{display:none}.foot{padding:0 15px 25px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+[hidden]{display:none!important}
+
+</style></head><body data-category="home"><aside id="local-notice" hidden style="background:#fff2cd;color:#62480e;border-bottom:1px solid #e5cd90;padding:12px 18px;font:600 13px/1.65 -apple-system,BlinkMacSystemFont,'Yu Gothic',sans-serif;">
+⚠ ローカルファイル表示中：問題を表示できますが、Pythonの実行にはWebサーバが必要です。ZIPを「すべて展開」し、同じフォルダの <strong>「Windowsでプレビュー開始.bat」</strong> をダブルクリックしてください。GitHub Pages公開後はこの案内は表示されません。
+</aside>
+<script>if(location.protocol==='file:')document.getElementById('local-notice').hidden=false;</script><header class="top"><div class="top-in"><div class="brandbar"><a class="brand" href="index.html"><span class="brand-icon">Py</span><span>情報Ⅰ Python LAB <small>BEST FIT p.70〜75</small></span></a><div class="rightlinks"><span class="extra">タブレット対応・インストール不要</span><a href="index.html">⌂ コース一覧</a></div></div><div class="hero"><div><p class="eyebrow">PYTHON PRACTICE / BEST FIT 101–106</p><h1>ベストフィットに向けた実行演習</h1><p>短いコードを変更 → 実行 → 結果を確認 → 理解チェック</p></div><div class="progress-wrap"><strong id="progress-count">0 / 36</strong><small>全36問の学習進捗</small><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div></div></div></div></header><main><p class="eyeline">分野を選択（分野ごとに別ページ）</p><nav id="categories" class="categories" aria-label="分野一覧"></nav><section class="homehero"><h2>「動かして考える」から、教科書の問題へ。</h2><p>まずは変数を1つ変えるところから。最後はベストフィット101〜106を実際のPythonコードで確かめます。最初からすべてを書く必要はありません。</p><div class="home-summary"><strong>使い方は4ステップ</strong><p>①分野を選ぶ → ②画面の指示に沿ってコードの一部を変える → ③「Pythonで実行」 → ④理解チェックに答える。<br>途中から始めてもOK。各分野の★がベストフィットの問題です。</p></div></section><p class="eyeline">7分野・全36問</p><section id="roadmap" class="roadmap" aria-label="学習の順番"></section></main><footer class="foot">出典：ご提供の『ベストフィット 情報Ⅰ』p.70〜75・問題101〜106に対応した授業用オリジナル演習。ブラウザ内でPythonを実行します。進捗は端末に保存され、生徒の回答が教師へ自動送信されることはありません。</footer><script>
+window.BF_DATA = {
+  "categories": [
+    {
+      "id": "basic",
+      "num": "01",
+      "name": "変数・計算",
+      "subtitle": "代入・表示・商と余り",
+      "goal": "106への準備",
+      "file": "basic.html"
+    },
+    {
+      "id": "branch",
+      "num": "02",
+      "name": "条件分岐",
+      "subtitle": "if / elif / else / %",
+      "goal": "105⑴への準備",
+      "file": "branch.html"
+    },
+    {
+      "id": "loop",
+      "num": "03",
+      "name": "繰り返し",
+      "subtitle": "for / range / 合計 / 複利",
+      "goal": "101・105⑶⑷",
+      "file": "loop.html"
+    },
+    {
+      "id": "array",
+      "num": "04",
+      "name": "一次元配列",
+      "subtitle": "リスト・最小値・最大値",
+      "goal": "102",
+      "file": "array.html"
+    },
+    {
+      "id": "matrix",
+      "num": "05",
+      "name": "二次元配列",
+      "subtitle": "行と列・二重ループ・九九",
+      "goal": "103",
+      "file": "matrix.html"
+    },
+    {
+      "id": "function",
+      "num": "06",
+      "name": "関数",
+      "subtitle": "引数・戻り値・再利用",
+      "goal": "104",
+      "file": "function.html"
+    },
+    {
+      "id": "integrated",
+      "num": "07",
+      "name": "総合演習",
+      "subtitle": "位の取り出し・硬貨",
+      "goal": "105⑵・106",
+      "file": "integrated.html"
+    }
+  ],
+  "lessons": [
+    {
+      "cat": "basic",
+      "id": "b01",
+      "title": "まずは実行してみよう",
+      "level": "見る→実行",
+      "source": "p.70 順次構造",
+      "goal": "プログラムは上から順番に動く。",
+      "do": "まず「実行」してみよう。そのあと、好きな文字に書き換えてもう一度実行。",
+      "code": "print('こんにちは')\nprint('情報Ⅰ')",
+      "expected": "こんにちは\n情報Ⅰ",
+      "stdin": "",
+      "hint": "print() は文字や数字を表示する関数。文字は引用符で囲もう。",
+      "why": "順次構造：1行目が終わってから2行目が実行される。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "basic",
+      "id": "b02",
+      "title": "変数は値を入れる箱",
+      "level": "数字を変更",
+      "source": "p.70 変数",
+      "goal": "変数と代入の意味を知る。",
+      "do": "まず実行し、次に x を 12 に変えて「12」が表示されるようにしよう。",
+      "code": "x = 5\nprint(x)",
+      "expected": "12",
+      "stdin": "",
+      "hint": "1行目の 5 を 12 に変更。",
+      "why": "「x = 12」は、数学の等号ではなく「変数 x に12を代入する」という意味。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "basic",
+      "id": "b03",
+      "title": "変数の値を更新する",
+      "level": "1行を書き換え",
+      "source": "p.70 変数",
+      "goal": "自分自身に足す処理を理解する。",
+      "do": "「x = x + 3」の3を変更し、結果を 15 にしよう。",
+      "code": "x = 8\nx = x + 3\nprint(x)",
+      "expected": "15",
+      "stdin": "",
+      "hint": "8 に 7 を足すと15。",
+      "why": "右辺を先に計算し、結果を左辺の変数に入れる。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "basic",
+      "id": "b04",
+      "title": "商と余りを使う",
+      "level": "実行→考える",
+      "source": "p.75 / 問106への準備",
+      "goal": "//（商）と %（余り）の違い。",
+      "do": "まず実行。次に 23円を10円硬貨と1円硬貨に分けるように、xを23に変更しよう。",
+      "code": "x = 17\nprint(x // 10)\nprint(x % 10)",
+      "expected": "2\n3",
+      "stdin": "",
+      "hint": "23 // 10 は 2、23 % 10 は 3。",
+      "why": "// は割り算の商の整数部分（正の整数で考える）。% は割った余り。",
+      "quiz": [],
+      "trace": [
+        "23 ÷ 10 → 商2、余り3",
+        "10円硬貨2枚、残り3円 → 1円硬貨3枚"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "basic",
+      "id": "b05",
+      "title": "小さな計算を組み立てる",
+      "level": "チャレンジ",
+      "source": "p.75 / 問106への準備",
+      "goal": "商を使って50円硬貨の枚数を求める。",
+      "do": "x = 347円 のとき、50円硬貨が6枚と表示されるように「// 10」を修正しよう。",
+      "code": "x = 347\nnum50 = x // 10\nprint(num50)",
+      "expected": "6",
+      "stdin": "",
+      "hint": "50円硬貨の枚数 → 347 // 50。",
+      "why": "50円硬貨は 347 ÷ 50 の商の整数部分で6枚。余りは47円。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "branch",
+      "id": "c01",
+      "title": "条件が成り立つときだけ",
+      "level": "数字を変更",
+      "source": "p.71 選択構造",
+      "goal": "if と else の分岐。",
+      "do": "xを20に変更し、「成人」が表示されるようにしよう。",
+      "code": "x = 15\nif x >= 18:\n    print(\"成人\")\nelse:\n    print(\"18歳未満\")",
+      "expected": "成人",
+      "stdin": "",
+      "hint": "最初の x = 15 を x = 20 に。",
+      "why": "条件式がTrueならifの下、そうでなければelseの下を実行する。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "branch",
+      "id": "c02",
+      "title": "余りで偶数かを判断",
+      "level": "条件式を変更",
+      "source": "p.71 例題55 / p.75 問105⑴",
+      "goal": "% と == を組み合わせる。",
+      "do": "偶数のときだけ「Yes」が出るよう、ifの条件を直そう。",
+      "code": "x = int(input('整数を入力: '))\nif x % 3 == 0:\n    print('Yes')\nelse:\n    print('No')",
+      "expected": "整数を入力: Yes",
+      "stdin": "10",
+      "hint": "偶数は2で割った余りが0。% 3 を % 2 に変えよう。",
+      "why": "== は比較（等しいか）、= は代入。12 % 2 == 0 はTrue。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "ベストフィット105⑴：このプログラムは何を判断する？",
+          "options": [
+            "正か負か",
+            "偶数か奇数か",
+            "3桁かどうか"
+          ],
+          "answer": "偶数か奇数か",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "branch",
+      "id": "c03",
+      "title": "FIZZとBUZZ（入れ子）",
+      "level": "実行→予想",
+      "source": "p.71 例題55",
+      "goal": "字下げされた処理の範囲。",
+      "do": "最初は x=30 で実行。次に x=9 にして、FIZZだけが表示されることを確認。",
+      "code": "x = 30\nif x % 3 == 0:\n    print('FIZZ')\n    if x % 5 == 0:\n        print('BUZZ')",
+      "expected": "FIZZ\nBUZZ",
+      "stdin": "",
+      "hint": "x が3の倍数か確認してから、さらに5の倍数か確認する。",
+      "why": "内側の if は、外側の if が成立した場合だけ実行される。x=9ではFIZZだけ。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "x=10 に変えると何が表示される？",
+          "options": [
+            "FIZZ",
+            "BUZZ",
+            "何も表示されない"
+          ],
+          "answer": "何も表示されない",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "branch",
+      "id": "c04",
+      "title": "絶対値を求めよう",
+      "level": "条件を書き換え",
+      "source": "p.72 / 問100",
+      "goal": "負数の符号を反転する。",
+      "do": "-8 を 8 と表示するように「if x > 0:」を修正しよう。",
+      "code": "x = -8\nif x > 0:\n    x = -x\nprint(x)",
+      "expected": "8",
+      "stdin": "",
+      "hint": "x が0より小さいとき符号を反転：x < 0",
+      "why": "-(-8) = 8。0以上の値は変更する必要がない。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "branch",
+      "id": "c05",
+      "title": "映画館の料金を決める",
+      "level": "コードを読む",
+      "source": "p.72 / 問99",
+      "goal": "複数分岐 elif の使い方。",
+      "do": "25歳の料金を確認してみよう。次に x=16、x=65でも試してみよう。",
+      "code": "x = 25\nif x <= 18:\n    print(1000)\nelif x >= 60:\n    print(1200)\nelse:\n    print(1800)",
+      "expected": "1800",
+      "stdin": "",
+      "hint": "25歳は「18歳以下」でも「60歳以上」でもない。",
+      "why": "p.72のフローチャートと同じで、19〜59歳は1800円。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "x=65なら料金は？",
+          "options": [
+            "1000円",
+            "1200円",
+            "1800円"
+          ],
+          "answer": "1200円",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "loop",
+      "id": "l01",
+      "title": "同じ処理を何回も",
+      "level": "数字を変更",
+      "source": "p.71 反復構造",
+      "goal": "range(n) が0からn-1まで回す。",
+      "do": "3回の表示を5回にするよう、range(3)を書き換えよう。",
+      "code": "for i in range(3):\n    print('こんにちは')",
+      "expected": "こんにちは\nこんにちは\nこんにちは\nこんにちは\nこんにちは",
+      "stdin": "",
+      "hint": "range(5) は i=0,1,2,3,4 の5回。",
+      "why": "for行の下で字下げされたprintが5回実行される。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "loop",
+      "id": "l02",
+      "title": "インデントで表示回数が変わる",
+      "level": "実行→選ぶ",
+      "source": "p.72 例題56",
+      "goal": "printの字下げと繰り返し。",
+      "do": "まず1回だけ5と表示されることを確認。その後print(x)を4つ空白で字下げするとどうなる？",
+      "code": "x = 0\nfor i in range(5):\n    x = x + 1\nprint(x)",
+      "expected": "5",
+      "stdin": "",
+      "hint": "printがforと同じ位置ならループの外。",
+      "why": "x=x+1だけが5回。print(x)は最後に1回だけ。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "print(x)を4文字下げると表示は何回？",
+          "options": [
+            "1回",
+            "5回",
+            "6回"
+          ],
+          "answer": "5回",
+          "why": ""
+        }
+      ],
+      "trace": [
+        "繰り返し後のx：0→1→2→3→4→5",
+        "ループの外にある print(x) は1度だけ"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "loop",
+      "id": "l03",
+      "title": "0から順に足してみよう",
+      "level": "数字を修正",
+      "source": "p.72 例題56",
+      "goal": "iが0〜4に変わることを知る。",
+      "do": "0、1、3、6、10の順に表示するため、x = x + 1 を修正しよう。",
+      "code": "x = 0\nfor i in range(5):\n    x = x + 1\n    print(x)",
+      "expected": "0\n1\n3\n6\n10",
+      "stdin": "",
+      "hint": "毎回1を足すのではなく、変数 i を足す。",
+      "why": "iは0→1→2→3→4。累積和は0→1→3→6→10。",
+      "quiz": [],
+      "trace": [
+        "i=0 → x=0",
+        "i=1 → x=1",
+        "i=2 → x=3",
+        "i=3 → x=6",
+        "i=4 → x=10"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "loop",
+      "id": "l04",
+      "title": "1から入力値までの和",
+      "level": "数値を変更",
+      "source": "p.75 / 問105⑶",
+      "goal": "range(1, x+1) で1〜x。",
+      "do": "1〜10の和55を表示しよう。入力欄の「5」を「10」に変えて実行。",
+      "code": "x = int(input('正の整数: '))\nkekka = 0\nfor i in range(1, x + 1):\n    kekka = kekka + i\nprint(kekka)",
+      "expected": "正の整数: 55",
+      "stdin": "5",
+      "hint": "コードではなく下の「入力値」欄を10に変更する。",
+      "why": "rangeの終点は含まれないため、x+1にするとxまで足せる。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "問105⑶：何をするプログラム？",
+          "options": [
+            "入力値までの合計を求める",
+            "入力値の約数を出す",
+            "入力値を2乗する"
+          ],
+          "answer": "入力値までの合計を求める",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false,
+      "gradeInput": "10"
+    },
+    {
+      "cat": "loop",
+      "id": "l05",
+      "title": "約数を全部表示する",
+      "level": "実行→選ぶ",
+      "source": "p.75 / 問105⑷",
+      "goal": "繰り返しと条件分岐の組合せ。",
+      "do": "入力12で実行し、約数を確かめよう。続いて入力6などでも試してみよう。",
+      "code": "x = int(input('正の整数: '))\nretsu = []\nfor i in range(1, x + 1):\n    if x % i == 0:\n        retsu.append(i)\nprint(retsu)",
+      "expected": "正の整数: [1, 2, 3, 4, 6, 12]",
+      "stdin": "12",
+      "hint": "x % i == 0 なら割り切れる → iをリストへ追加する。",
+      "why": "retsu.append(i)はリストの最後にiを追加する。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "問105⑷：どんな数がリストに入る？",
+          "options": [
+            "xより大きい数",
+            "xの約数",
+            "偶数だけ"
+          ],
+          "answer": "xの約数",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "loop",
+      "id": "l06",
+      "title": "複利を1年ずつ計算",
+      "level": "コードを読む",
+      "source": "p.73 / 問101への準備",
+      "goal": "預金額に1.01を繰り返しかける。",
+      "do": "10000円を年1%で3年間増やした推移を確認しよう。",
+      "code": "yokin = 10000\nrisoku = 1.0\nfor i in range(3):\n    yokin = yokin * (1 + risoku / 100)\n    print(int(yokin))",
+      "expected": "10100\n10201\n10303",
+      "stdin": "",
+      "hint": "1年目10100、2年目10201、3年目10303（小数点以下切捨て）。",
+      "why": "利率は一定1%。増えるのは預金額。int()は小数部分を切り捨てる。",
+      "quiz": [],
+      "trace": [
+        "1年目：10000×1.01＝10100",
+        "2年目：10100×1.01＝10201",
+        "3年目：10201×1.01＝10303.01 → 表示は10303"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "loop",
+      "id": "l07",
+      "title": "★ ベストフィット 101",
+      "level": "教科書に挑戦",
+      "source": "p.73 問101",
+      "goal": "複利の10年分の表示について正しく説明する。",
+      "do": "最初に正しい説明を選び、その後「実行」して本当に10行表示されるか確かめよう。",
+      "code": "yokin = 10000\nrisoku = 1.0\nfor i in range(10):\n    yokin = yokin * (1 + risoku / 100)\n    print(int(yokin))",
+      "expected": "10100\n10201\n10303\n10406\n10510\n10615\n10721\n10828\n10936\n11046",
+      "stdin": "",
+      "hint": "print() の位置は、for文の下で字下げされている。",
+      "why": "正答は(エ)。表示処理も10回繰り返され、利率は1%のまま。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "問101：最も適当な記述はどれ？",
+          "options": [
+            "(ア) 利息は毎年100分の1ずつ増加",
+            "(イ) 預金額に年数は関係ない",
+            "(ウ) 計算後に一度だけ表示",
+            "(エ) 年数分繰り返し表示"
+          ],
+          "answer": "(エ) 年数分繰り返し表示",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": true
+    },
+    {
+      "cat": "array",
+      "id": "a01",
+      "title": "配列に並んだデータ",
+      "level": "数字を変更",
+      "source": "p.71 配列",
+      "goal": "添字が0から始まる。",
+      "do": "2番目の得点「40」を表示するよう [0] を変えよう。",
+      "code": "Tokuten = [50, 40, 90]\nprint(Tokuten[0])",
+      "expected": "40",
+      "stdin": "",
+      "hint": "Pythonは0番目から数えるので、2番目は添字[1]。",
+      "why": "配列の位置を表す数字が「添字」。Pythonの先頭は添字0。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "array",
+      "id": "a02",
+      "title": "配列を順に取り出す",
+      "level": "実行→選ぶ",
+      "source": "p.72 例題57",
+      "goal": "for x in 配列 を理解する。",
+      "do": "まず実行して、配列の要素が順番に表示されることを確かめよう。",
+      "code": "kakaku = [580, 970, 430]\nfor x in kakaku:\n    print(x)",
+      "expected": "580\n970\n430",
+      "stdin": "",
+      "hint": "xに580→970→430と順番に入る。",
+      "why": "for x in kakaku は配列のすべての要素を一つずつ取り出す。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "このfor文は何回繰り返される？",
+          "options": [
+            "2回",
+            "3回",
+            "4回"
+          ],
+          "answer": "3回",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "array",
+      "id": "a03",
+      "title": "いちばん安い値を探す",
+      "level": "条件を変更",
+      "source": "p.72 例題57",
+      "goal": "小さい数が見つかれば最小値を更新。",
+      "do": "最安値430と表示されるよう if の比較演算子を修正しよう。",
+      "code": "kakaku = [580, 970, 430, 820, 760]\nsaisyo = kakaku[0]\nfor x in kakaku:\n    if x > saisyo:\n        saisyo = x\nprint('最安値:', saisyo)",
+      "expected": "最安値: 430",
+      "stdin": "",
+      "hint": "最小値を探すので x < saisyo とする。",
+      "why": "現在の最小値と順番に比較し、より小さいときだけ更新する。",
+      "quiz": [],
+      "trace": [
+        "初期値 saisyo=580",
+        "970：更新しない",
+        "430：430に更新",
+        "820,760：更新しない →430"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "array",
+      "id": "a04",
+      "title": "最高点と出席番号",
+      "level": "実行→理解",
+      "source": "p.74 / 問102への準備",
+      "goal": "最高点と位置を一緒に記録する。",
+      "do": "4人分の最高点と出席番号を表示してみよう。",
+      "code": "Tokuten = [50, 40, 90, 70]\nsaidai = 0\nbango = 0\nfor i in range(len(Tokuten)):\n    if Tokuten[i] > saidai:\n        saidai = Tokuten[i]\n        bango = i\nprint('最高点：', saidai, '出席番号：', bango + 1)",
+      "expected": "最高点： 90 出席番号： 3",
+      "stdin": "",
+      "hint": "最大値saidaiを変えるとき、添字bangoも一緒に更新。",
+      "why": "Pythonの添字は0開始。出席番号は1開始なので表示時にbango+1とする。",
+      "quiz": [],
+      "trace": [
+        "i=0：50 → saidai=50、bango=0",
+        "i=1：40 → 更新なし",
+        "i=2：90 → saidai=90、bango=2",
+        "i=3：70 → 更新なし、出席番号3"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "array",
+      "id": "a05",
+      "title": "★ ベストフィット 102",
+      "level": "教科書に挑戦",
+      "source": "p.74 問102",
+      "goal": "教科書（添字1開始）の穴埋めを解ける。",
+      "do": "教科書の空欄①②③を答えよう。その後、Pythonで同じ処理を実行して違いを確かめる。",
+      "code": "# Python版：添字は0から始まる\nTokuten = [50, 40, 95, 30, 70]\nsaidai = 0\nbango = 0\nfor i in range(len(Tokuten)):\n    if Tokuten[i] > saidai:\n        saidai = Tokuten[i]\n        bango = i\nprint('最高点：', saidai, '出席番号：', bango + 1)",
+      "expected": "最高点： 95 出席番号： 3",
+      "stdin": "",
+      "hint": "教科書は添字1開始。①は要素数、②は大きければ更新、③は出席番号を記録した変数。",
+      "why": "解答：①(ア)要素数(Tokuten)、②(オ)>、③(ク)bango。Pythonは添字0開始なので range(len(...))、表示はbango+1。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "① 繰り返しの最後の添字（教科書：1開始）",
+          "options": [
+            "(ア) 要素数(Tokuten)",
+            "(イ) 要素数(Tokuten)-1",
+            "(ウ) 要素数(Tokuten)+1"
+          ],
+          "answer": "(ア) 要素数(Tokuten)",
+          "why": ""
+        },
+        {
+          "kind": "choice",
+          "question": "② 最高点を更新する比較演算子",
+          "options": [
+            "(エ) <",
+            "(オ) >",
+            "(カ) =="
+          ],
+          "answer": "(オ) >",
+          "why": ""
+        },
+        {
+          "kind": "choice",
+          "question": "③ 出席番号として表示するもの（教科書）",
+          "options": [
+            "(キ) i",
+            "(ク) bango",
+            "(ケ) bango + 1"
+          ],
+          "answer": "(ク) bango",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": true
+    },
+    {
+      "cat": "matrix",
+      "id": "m01",
+      "title": "縦横に並ぶ二次元配列",
+      "level": "数字を変更",
+      "source": "p.72 例題58",
+      "goal": "二つの添字を読める。",
+      "do": "「33」を表示できるように最後の [0][1] を直そう。",
+      "code": "a = [[1, 2, 3], [11, 22, 33]]\nprint(a[0][1])",
+      "expected": "33",
+      "stdin": "",
+      "hint": "2行目の3番目。添字は[1][2]。",
+      "why": "a[行][列]の順で指定する。0始まりなので2行目は[1]、3列目は[2]。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "matrix",
+      "id": "m02",
+      "title": "配列の月と日を読み取る",
+      "level": "実行→選ぶ",
+      "source": "p.72 例題58",
+      "goal": "kousui[2][8]の場所を理解する。",
+      "do": "まず実行してから、何月何日を表すか考えよう。",
+      "code": "kousui = [[0] * 31 for _ in range(12)]\nkousui[2][8] = 12\nprint(kousui[2][8])",
+      "expected": "12",
+      "stdin": "",
+      "hint": "月も日も0から数えている。2は3番目の月、8は9番目の日。",
+      "why": "例題58の答えは3月9日。値12はこの教材で置いた仮の降水量。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "kousui[2][8]は何月何日？",
+          "options": [
+            "2月8日",
+            "3月8日",
+            "3月9日"
+          ],
+          "answer": "3月9日",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "matrix",
+      "id": "m03",
+      "title": "二重の繰り返しで九九",
+      "level": "数字を変更",
+      "source": "p.74 / 問103への準備",
+      "goal": "外側のdanと内側のkazu。",
+      "do": "2の段を1行出したら、外側のrange(2,3)をrange(2,4)に変えて、3の段まで表示しよう。",
+      "code": "for dan in range(2, 3):\n    for kazu in range(1, 4):\n        print(dan * kazu, end=\" \")\n    print()",
+      "expected": "2 4 6 \n3 6 9 ",
+      "stdin": "",
+      "hint": "外側ループは段。range(2,4)ならdan=2,3。",
+      "why": "内側のループが終わるたびに print() で改行して、段を分ける。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "matrix",
+      "id": "m04",
+      "title": "★ ベストフィット 103",
+      "level": "教科書に挑戦",
+      "source": "p.74 問103",
+      "goal": "1段分を9回表示できる。",
+      "do": "教科書の空欄①と、配列表示()に渡す引数を答えよう。次にPythonの9×9の表を実行。",
+      "code": "Kuku = [[0] * 9 for _ in range(9)]\nfor dan in range(1, 10):\n    for kazu in range(1, 10):\n        Kuku[dan - 1][kazu - 1] = dan * kazu\n    print(Kuku[dan - 1])",
+      "expected": "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n[2, 4, 6, 8, 10, 12, 14, 16, 18]\n[3, 6, 9, 12, 15, 18, 21, 24, 27]\n[4, 8, 12, 16, 20, 24, 28, 32, 36]\n[5, 10, 15, 20, 25, 30, 35, 40, 45]\n[6, 12, 18, 24, 30, 36, 42, 48, 54]\n[7, 14, 21, 28, 35, 42, 49, 56, 63]\n[8, 16, 24, 32, 40, 48, 56, 64, 72]\n[9, 18, 27, 36, 45, 54, 63, 72, 81]",
+      "stdin": "",
+      "hint": "(04)で九九の数を代入後、(05)は「内側forの外、外側forの中」に置く。",
+      "why": "⑴03行目と揃えると、kazuのループ終了後に段ごと表示（答え03）。⑵(イ)Kuku[dan]。Pythonの二次元配列は0開始なので[dan-1]。",
+      "quiz": [
+        {
+          "kind": "text",
+          "question": "⑴ 空欄①に入る行番号（半角数字2桁）",
+          "answer": "03",
+          "why": ""
+        },
+        {
+          "kind": "choice",
+          "question": "⑵ 配列表示() に渡すもの（教科書）",
+          "options": [
+            "(ア) Kuku",
+            "(イ) Kuku[dan]",
+            "(ウ) Kuku[kazu]",
+            "(エ) Kuku[dan][kazu]"
+          ],
+          "answer": "(イ) Kuku[dan]",
+          "why": ""
+        }
+      ],
+      "trace": [
+        "dan=1: 1の段を9個代入→1行表示",
+        "dan=2: 2の段を9個代入→1行表示",
+        "…",
+        "dan=9: 9の段を9個代入→1行表示（計9行）"
+      ],
+      "conceal": true
+    },
+    {
+      "cat": "function",
+      "id": "f01",
+      "title": "関数は処理のひとまとめ",
+      "level": "実行→変える",
+      "source": "p.71 関数",
+      "goal": "defと関数の呼び出し。",
+      "do": "printの文字を「おはよう」に変更し、関数から表示させよう。",
+      "code": "def aisatsu():\n    print('こんにちは')\naisatsu()",
+      "expected": "おはよう",
+      "stdin": "",
+      "hint": "defの下の文字列を変更。",
+      "why": "defで関数を定義するだけでは動かない。aisatsu()と呼び出して初めて実行する。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "function",
+      "id": "f02",
+      "title": "関数に値を渡す",
+      "level": "数値を変更",
+      "source": "p.71 三角形の面積",
+      "goal": "引数の働き。",
+      "do": "底辺8、高さ4の面積16になるよう、関数を呼び出すときの数字を修正しよう。",
+      "code": "def sankaku(teihen, takasa):\n    return teihen * takasa / 2\nprint(sankaku(8, 2))",
+      "expected": "16.0",
+      "stdin": "",
+      "hint": "sankaku(8,4)にすると8×4÷2=16。",
+      "why": "teihen、takasaは引数。returnで呼び出し元へ計算結果を返す。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "function",
+      "id": "f03",
+      "title": "税込価格を関数で求める",
+      "level": "数字を変更",
+      "source": "p.72 例題59",
+      "goal": "同じ関数を別の引数で使える。",
+      "do": "1980円の10%・8%税込価格が表示されるように、2回目の税率を修正しよう。",
+      "code": "def zeikomi(kingaku, tax):\n    return kingaku + kingaku * tax // 100\nkakaku = 1980\nprint(zeikomi(kakaku, 10))\nprint(zeikomi(kakaku, 10))",
+      "expected": "2178\n2138",
+      "stdin": "",
+      "hint": "2回目の関数呼び出しの 10 を 8 にする。",
+      "why": "関数は何度でも呼び出せる。引数を変えれば結果も変わる。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "function",
+      "id": "f04",
+      "title": "return と print は違う",
+      "level": "コードを読む",
+      "source": "p.74 / 問104への準備",
+      "goal": "戻り値と表示の区別。",
+      "do": "半径2の円の面積を表示しよう。returnの結果がprintに渡る。",
+      "code": "def func(kazu):\n    pai = 3.14\n    return pai * kazu * kazu\nprint(func(2))",
+      "expected": "12.56",
+      "stdin": "",
+      "hint": "3.14 × 2 × 2 = 12.56。",
+      "why": "returnは「値を返す」処理。画面に表示しているのは関数の外のprint。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "function",
+      "id": "f05",
+      "title": "★ ベストフィット 104",
+      "level": "教科書に挑戦",
+      "source": "p.74 問104",
+      "goal": "関数の戻り値を予想できる。",
+      "do": "x=5を入力すると「答えは」の後に何が表示される？ 予想を回答してから実行しよう。",
+      "code": "def func(kazu):\n    pai = 3.14\n    return pai * kazu * kazu\nx = float(input('正の数を入力: '))\nprint('答えは', func(x))",
+      "expected": "正の数を入力: 答えは 78.5",
+      "stdin": "5",
+      "hint": "3.14 × 5 × 5 = 78.5。",
+      "why": "引数kazuに5.0が渡され、returnで78.5が返される。",
+      "quiz": [
+        {
+          "kind": "text",
+          "question": "「答えは」の直後に表示される数値",
+          "answer": "78.5",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": true
+    },
+    {
+      "cat": "integrated",
+      "id": "i01",
+      "title": "3桁の数字を逆さに",
+      "level": "コードを読む",
+      "source": "p.75 / 問105⑵",
+      "goal": "// と % を組み合わせる。",
+      "do": "入力123を321にして表示する処理を確認。次に456も試してみよう。",
+      "code": "x = int(input('3桁の整数: '))\nn100 = x // 100\nn10 = (x % 100) // 10\nn1 = x % 10\nprint(n1 * 100 + n10 * 10 + n100)",
+      "expected": "3桁の整数: 321",
+      "stdin": "123",
+      "hint": "123の百の位は1、十の位は2、一の位は3。3×100+2×10+1。",
+      "why": "問105⑵：入力された3桁の数字の並びを逆順にして表示。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "問105⑵：このプログラムは何をする？",
+          "options": [
+            "3桁を逆に並べる",
+            "3桁の合計を求める",
+            "3桁かどうか判定する"
+          ],
+          "answer": "3桁を逆に並べる",
+          "why": ""
+        }
+      ],
+      "trace": [
+        "123 // 100 → 1",
+        "(123 % 100) // 10 → 2",
+        "123 % 10 → 3",
+        "3×100+2×10+1 → 321"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "integrated",
+      "id": "i02",
+      "title": "50円で何枚払える？",
+      "level": "数値を書き換え",
+      "source": "p.75 / 問106への準備",
+      "goal": "大きい硬貨から先に考える。",
+      "do": "347円に対し50円硬貨が6枚、残りが47円になるよう修正しよう。",
+      "code": "x = 347\nnum50 = x // 10\nnokori = x - num50 * 50\nprint(num50)\nprint(nokori)",
+      "expected": "6\n47",
+      "stdin": "",
+      "hint": "50円硬貨の枚数は347 // 50。",
+      "why": "大きい硬貨から決める。347−6×50＝47。",
+      "quiz": [],
+      "trace": [],
+      "conceal": false
+    },
+    {
+      "cat": "integrated",
+      "id": "i03",
+      "title": "10円・1円も計算",
+      "level": "1行を書き換え",
+      "source": "p.75 / 問106への準備",
+      "goal": "残金を使った硬貨の枚数。",
+      "do": "50円6枚、10円4枚、1円7枚、合計17枚を表示するように10円硬貨の式を直そう。",
+      "code": "x = 347\nnum50 = x // 50\nnum10 = (x - num50 * 50) // 50\nnum1 = x - num50 * 50 - num10 * 10\nprint(num50, num10, num1)\nprint(num50 + num10 + num1)",
+      "expected": "6 4 7\n17",
+      "stdin": "",
+      "hint": "num10の計算では、残った金額を10で割る。",
+      "why": "347円＝50円×6＋10円×4＋1円×7。6+4+7=17枚。",
+      "quiz": [],
+      "trace": [
+        "347//50 → 6枚、残り47円",
+        "47//10 → 4枚、残り7円",
+        "1円7枚、合計6+4+7=17枚"
+      ],
+      "conceal": false
+    },
+    {
+      "cat": "integrated",
+      "id": "i04",
+      "title": "★ ベストフィット 106",
+      "level": "教科書に挑戦",
+      "source": "p.75 問106",
+      "goal": "硬貨の最小枚数を求める5つの空欄。",
+      "do": "教科書の空欄①〜⑤（いずれも数字）を答えて、347円の例で実行しよう。",
+      "code": "x = int(input('代金を入力: '))\nnum50 = x // 50\nnum10 = (x - num50 * 50) // 10\nnum1 = x - num50 * 50 - num10 * 10\nprint('最小限の枚数は', num50 + num10 + num1, '枚')",
+      "expected": "代金を入力: 最小限の枚数は 17 枚",
+      "stdin": "347",
+      "hint": "まず50円の枚数→残金の10円の枚数→残りの1円の枚数。",
+      "why": "解答：①50、②50、③10、④50、⑤10。347円なら6+4+7=17枚。",
+      "quiz": [
+        {
+          "kind": "text",
+          "question": "① 50円硬貨の枚数を求める除数",
+          "answer": "50",
+          "why": ""
+        },
+        {
+          "kind": "text",
+          "question": "② 50円硬貨の金額として掛ける数",
+          "answer": "50",
+          "why": ""
+        },
+        {
+          "kind": "text",
+          "question": "③ 10円硬貨の枚数を求める除数",
+          "answer": "10",
+          "why": ""
+        },
+        {
+          "kind": "text",
+          "question": "④ 50円硬貨の合計金額の単価",
+          "answer": "50",
+          "why": ""
+        },
+        {
+          "kind": "text",
+          "question": "⑤ 10円硬貨の合計金額の単価",
+          "answer": "10",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": true
+    },
+    {
+      "cat": "integrated",
+      "id": "i05",
+      "title": "★ ベストフィット 105 総まとめ",
+      "level": "教科書に挑戦",
+      "source": "p.75 問105⑴〜⑷",
+      "goal": "4つのプログラムを説明できる。",
+      "do": "101〜106の総仕上げ。4つの処理の役割を選び、それぞれの実行結果と一致するか確認しよう。",
+      "code": "# 問105⑴〜⑷は他のページで実際に実行できます\n# ここでは4つの動きをまとめて確認します\nprint('⑴', 12 % 2 == 0)\nprint('⑵', 3 * 100 + 2 * 10 + 1)\nprint('⑶', sum(range(1, 6)))\nprint('⑷', [i for i in range(1, 13) if 12 % i == 0])",
+      "expected": "⑴ True\n⑵ 321\n⑶ 15\n⑷ [1, 2, 3, 4, 6, 12]",
+      "stdin": "",
+      "hint": "⑴偶数、⑵3桁逆順、⑶1〜xの和、⑷約数。",
+      "why": "問105の各サンプルの詳細は「条件分岐」「繰り返し」「総合演習」で学べる。",
+      "quiz": [
+        {
+          "kind": "choice",
+          "question": "⑴ x%2==0 の役割",
+          "options": [
+            "偶数か判断",
+            "約数を表示",
+            "絶対値を表示"
+          ],
+          "answer": "偶数か判断",
+          "why": ""
+        },
+        {
+          "kind": "choice",
+          "question": "⑵ 位を取り出す処理",
+          "options": [
+            "値を3倍する",
+            "3桁を逆順にする",
+            "百の位だけ表示"
+          ],
+          "answer": "3桁を逆順にする",
+          "why": ""
+        },
+        {
+          "kind": "choice",
+          "question": "⑶ 1からxまで繰り返す処理",
+          "options": [
+            "合計を求める",
+            "最大値を求める",
+            "倍数だけ求める"
+          ],
+          "answer": "合計を求める",
+          "why": ""
+        },
+        {
+          "kind": "choice",
+          "question": "⑷ x%i==0 でリストに追加",
+          "options": [
+            "平方根",
+            "約数",
+            "素数だけ"
+          ],
+          "answer": "約数",
+          "why": ""
+        }
+      ],
+      "trace": [],
+      "conceal": true
+    }
+  ]
+};
+
+</script><script>
+(() => {
+ 'use strict';
+ const {categories,lessons} = window.BF_DATA;
+ const currentCat = document.body.dataset.category || 'home';
+ const progressKey='bestfit-python-lab-progress-v1';
+ const draftPrefix='bestfit-python-lab-draft-v1-';
+ const inputPrefix='bestfit-python-lab-input-v1-';
+ const $=id=>document.getElementById(id);
+ const safeGet = (key) => {try{return localStorage.getItem(key)}catch(_){return null}};
+ const safeSet = (key,val) => {try{localStorage.setItem(key,val)}catch(_){}};
+ let progress={};
+ try{progress=JSON.parse(safeGet(progressKey)||'{}')||{}}catch(_){progress={}};
+ const total=lessons.length;
+ const html = s=>{const span=document.createElement('span');span.textContent=String(s);return span.innerHTML};
+ const completed=()=>lessons.filter(l=>progress[l.id]).length;
+ const buildProgress=()=>{
+  $('progress-count').textContent=`${completed()} / ${total}`;
+  $('progress-bar').style.width=completed()/total*100+'%';
+ };
+ const makeCategoryNav=()=>{
+  $('categories').innerHTML=categories.map(c=>{
+   const done=lessons.filter(l=>l.cat===c.id&&progress[l.id]).length;
+   const count=lessons.filter(l=>l.cat===c.id).length;
+   return `<a class="category" href="${c.file}" ${currentCat===c.id?'aria-current="page"':''}><span class="cat-num">STEP ${c.num} ・${done}/${count}問</span><strong>${html(c.name)}</strong><small>${html(c.goal)}</small></a>`;
+  }).join('');
+ };
+ buildProgress();makeCategoryNav();
+ if(currentCat==='home'){
+  $('roadmap').innerHTML=categories.map(c=>{
+   const each=lessons.filter(l=>l.cat===c.id),done=each.filter(l=>progress[l.id]).length;
+   return `<a class="road" href="${c.file}"><div class="roadtop"><span class="num">STEP ${c.num}</span><span class="small-muted">${done}/${each.length}問クリア</span></div><h3>${html(c.name)}</h3><p>${html(c.subtitle)}</p><div class="roadbottom">到達目標：${html(c.goal)}　→</div></a>`;
+  }).join('');
+  return;
+ }
+ const cat=categories.find(c=>c.id===currentCat), items=lessons.filter(l=>l.cat===currentCat);
+ if(!cat||!items.length)return;
+ let at=0,runOk=false,quizOk=false,lastRun=false;
+ let worker=null,workerReady=null,resolveReady=null,rejectReady=null,nextId=0,pending=new Map(),busy=false;
+ function select(index,changeHash=true){
+  if(index<0||index>=items.length)return;
+  at=index;const l=items[at]; runOk=false; quizOk=l.quiz.length===0; lastRun=false;
+  if(changeHash) history.replaceState(null,'','#'+l.id);
+  $('lesson-chips').innerHTML=items.map((item,i)=>`<button class="lesson-chip ${i===at?'current':''}" data-at="${i}" type="button">${i+1}${progress[item.id]?'<span class="tick">✓</span>':''}${item.source.includes('問10')?' <span aria-label="ベストフィット">★</span>':''}</button>`).join('');
+  for(const el of $('lesson-chips').querySelectorAll('button'))el.addEventListener('click',()=>select(Number(el.dataset.at)));
+  $('task-title').textContent=l.title;$('task-goal').textContent=l.goal;$('task-do').textContent=l.do;
+  $('source').textContent=l.source;$('level').textContent=l.level;
+  $('goal-label').textContent=cat.name;
+  $('hint-text').textContent=l.hint||'まず、実行結果を観察しよう。';
+  $('hint-box').open=false;
+  $('solution-text').textContent=l.why||'';$('solution-box').open=false;
+  $('expected').style.display=l.conceal?'none':'block';
+  $('expected-pre').textContent=l.expected??'（自由に実行してみよう）';
+  $('trace').hidden=!l.trace.length;
+  $('trace-list').innerHTML=l.trace.map(s=>`<li>${html(s)}</li>`).join('');
+  $('code').value=safeGet(draftPrefix+l.id)??l.code;
+  $('stdin').value=safeGet(inputPrefix+l.id)??l.stdin;
+  $('stdin-box').hidden=!(l.code.includes('input(')||l.stdin);
+  $('terminal').textContent='▶ 「Pythonで実行」を押すと、ここに結果が表示されます。';
+  $('terminal').classList.remove('is-error');
+  $('result').className='result';$('result').textContent='';
+  $('quiz-box').hidden=l.quiz.length===0;
+  $('quiz-feedback').className='feedback';$('quiz-feedback').hidden=true;
+  $('quiz-list').innerHTML=l.quiz.map((q,i)=>{
+   const id=`answer_${i}`;
+   return `<div class="qgroup"><p class="qtitle">${html(q.question)}</p>${q.kind==='choice' ? q.options.map((opt,j)=>`<label class="option"><input type="radio" name="${id}" value="${html(opt)}"><span>${html(opt)}</span></label>`).join('') : `<input class="answer-input" id="${id}" type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="ここに答えを入力">`}</div>`;
+  }).join('');
+  const nex=items[at+1];$('next').textContent=nex?'次の問題 →':'次の分野を見る →';
+  $('status').textContent=progress[l.id]?'✓ この問題はクリア済みです。':'コードを実行して、必要なら理解チェックも回答しよう。';
+  $('ready-state').textContent=worker?($('ready-state').textContent||'準備中'):'Python：初回実行時に読み込み';
+ }
+ const current=()=>items[at];
+ $('code').addEventListener('input',()=>{safeSet(draftPrefix+current().id,$('code').value);runOk=false;lastRun=false;updatePass();});
+ $('stdin').addEventListener('input',()=>{safeSet(inputPrefix+current().id,$('stdin').value);runOk=false;lastRun=false;updatePass();});
+ $('code').addEventListener('keydown',e=>{
+  if(e.key==='Tab'){e.preventDefault();insert('    ')}
+  if(e.key==='Enter'){
+   e.preventDefault();const box=$('code'),cursor=box.selectionStart,prior=box.value.slice(0,cursor);
+   const ln=prior.split('\n').pop();const indent=ln.match(/^ */)?.[0]||'';
+   insert('\n'+indent+(ln.trim().endsWith(':')?'    ':''));
+  }
+ });
+ function insert(s){const field=$('code'),start=field.selectionStart,end=field.selectionEnd;field.setRangeText(s,start,end,'end');field.focus();field.dispatchEvent(new Event('input',{bubbles:true}));}
+ for(const btn of $('keys').querySelectorAll('button'))btn.addEventListener('click',()=>insert(btn.dataset.key==='indent'?'    ':btn.dataset.key));
+ $('reset').addEventListener('click',()=>{
+  const l=current();$('code').value=l.code;$('stdin').value=l.stdin;
+  safeSet(draftPrefix+l.id,l.code);safeSet(inputPrefix+l.id,l.stdin);
+  runOk=false;lastRun=false;quizOk=l.quiz.length===0;select(at);
+ });
+ function boot(){
+  if(worker)return workerReady;
+  workerReady=new Promise((resolve,reject)=>{resolveReady=resolve;rejectReady=reject});
+  worker=new Worker('./python-worker.mjs',{type:'module'});
+  worker.addEventListener('message',e=>{
+   const msg=e.data||{};
+   if(msg.type==='ready'){$('ready-state').textContent='Python：準備完了';resolveReady();}
+   else if(msg.type==='loadError'){$('ready-state').textContent='Python：読み込み失敗';rejectReady(new Error(msg.error));}
+   else if(msg.type==='result'){
+    const p=pending.get(msg.id);if(p){pending.delete(msg.id);p(msg);}
+   }
+  });
+  worker.addEventListener('error',e=>{rejectReady?.(new Error(e.message||'Workerエラー'));$('ready-state').textContent='Python：エラー';});
+  $('ready-state').textContent='Python：読み込み中…（初回は時間がかかります）';return workerReady;
+ }
+ function abortWorker(){
+  if(worker)worker.terminate();worker=null;workerReady=null;
+  for(const fn of pending.values()) fn({output:'',error:'Pythonを停止しました。'});
+  pending.clear();$('ready-state').textContent='Python：停止（次回自動再起動）';
+ }
+ function runOnce(code,stdin){
+  return new Promise(resolve=>{
+   const id=++nextId;let finished=false;
+   const timeout=setTimeout(()=>{
+    if(finished)return;finished=true;pending.delete(id);abortWorker();resolve({output:'',error:'5秒以内に終了しなかったため停止しました。無限ループなどを確認してください。'});
+   },5000);
+   pending.set(id,msg=>{if(finished)return;finished=true;clearTimeout(timeout);resolve(msg);});
+   worker.postMessage({type:'run',id,code,stdin});
+  });
+ }
+ function normalize(x){return String(x??'').replace(/\r/g,'').trimEnd()}
+ function updatePass(){
+  const l=current();
+  if(runOk&&quizOk&&!progress[l.id]){
+   progress[l.id]=true;safeSet(progressKey,JSON.stringify(progress));buildProgress();makeCategoryNav();
+   $('lesson-chips').querySelectorAll('button')[at].innerHTML+=` <span class="tick">✓</span>`;
+  }
+  if(progress[l.id])$('status').textContent='✓ クリア！ 次の問題に進めます。';
+ }
+ $('run').addEventListener('click',async()=>{
+  if(location.protocol==='file:'){
+   $('terminal').textContent='Pythonの実行には localhost または GitHub Pages が必要です。\nZIPをすべて展開し、Windowsでプレビュー開始.bat をダブルクリックしてください。';
+   $('terminal').classList.add('is-error');
+   return;
+  }
+  if(busy)return;
+  busy=true;lastRun=false;runOk=false;
+  const l=current(), selected=l.id,runBtn=$('run');
+  const code=$('code').value,stdin=$('stdin').value;
+  runBtn.disabled=true;$('terminal').textContent='Pythonを準備しています…';$('terminal').classList.remove('is-error');
+  $('result').className='result';
+  try{
+   await Promise.race([boot(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Pythonの読み込みに60秒以上かかっています。ネット接続や学校のフィルタを確認してください。')),60000))]);
+   if(current().id!==selected)return;
+   $('terminal').textContent='実行しています…';
+   const outcome=await runOnce(code,stdin);
+   if(current().id!==selected)return;
+   lastRun=true;
+   $('terminal').textContent=(outcome.output||'(出力なし)')+(outcome.error?'\n⚠ '+outcome.error:'');
+   $('terminal').classList.toggle('is-error',!!outcome.error);
+   const validInput=(l.gradeInput??l.stdin).trim()===stdin.trim();
+   runOk=!outcome.error&&validInput&&normalize(outcome.output)===normalize(l.expected);
+   $('result').className='result visible '+(runOk?'ok':'no');
+   $('result').textContent=outcome.error?'エラーが発生しました。コードを修正してもう一度実行しよう。':!validInput?'入力欄の値が課題の指定と異なります。自由実験としてはOK。正解判定は指定値で行います。':runOk?'✓ 指定された実行結果と一致しました！': '実行できました。目標の出力と見比べて、もう一度考えてみよう。';
+   updatePass();
+  }catch(err){
+   if(current().id!==selected)return;
+   $('terminal').classList.add('is-error');
+   $('terminal').textContent='実行環境を読み込めませんでした。\n'+String(err.message||err)+'\n\nネット接続が必要です。CDN（cdn.jsdelivr.net）にアクセスできるか確認してください。';
+   $('result').className='result visible no';$('result').textContent='授業前に学校の回線・タブレットで動作確認してください。';
+  }finally{busy=false;runBtn.disabled=false;}
+ });
+ $('stop').addEventListener('click',()=>{abortWorker();$('terminal').textContent='実行環境を停止しました。もう一度「実行」を押すと再読み込みします。';busy=false;$('run').disabled=false;});
+ $('check-quiz').addEventListener('click',()=>{
+  const l=current(),answers=l.quiz.map((q,i)=>q.kind==='choice'?document.querySelector(`input[name="answer_${i}"]:checked`)?.value:($(`answer_${i}`)?.value||''));
+  const correct=l.quiz.map((q,i)=>{
+   const a=String(answers[i]||'').normalize('NFKC').trim().replace(/\s+/g,'');
+   return a===String(q.answer).normalize('NFKC').trim().replace(/\s+/g,'');
+  });
+  quizOk=correct.every(Boolean);
+  const fb=$('quiz-feedback');fb.hidden=false;fb.className='feedback '+(quizOk?'ok':'warn');
+  fb.textContent=quizOk?'✓ 理解チェックは全問正解です！ 実行結果も一致すればクリア。':`正解は ${correct.filter(Boolean).length}/${l.quiz.length} 問。もう一度考えてみよう。必要なら「ヒント」を見てみてください。`;
+  if(quizOk)updatePass();
+ });
+ $('next').addEventListener('click',()=>{
+  if(at<items.length-1){select(at+1);$('lesson-chips').scrollIntoView({behavior:'smooth',block:'start'});}
+  else{const idx=categories.findIndex(c=>c.id===currentCat);location.href=idx<categories.length-1?categories[idx+1].file:'index.html';}
+ });
+ addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.slice(1)),idx=items.findIndex(l=>l.id===id);if(idx>=0&&idx!==at)select(idx,false)});
+ const first=items.findIndex(l=>l.id===decodeURIComponent(location.hash.slice(1)));
+ select(first>=0?first:0,false);
+})();
+
+</script></body></html>
